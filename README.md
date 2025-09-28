@@ -9,4 +9,4 @@ I analyze a linear second-order analog filter using Fourier and Laplace transfor
 )
 , compute the closed-form step response and verify it numerically, generate Bode magnitude/phase plots, and evaluate the square-wave response via the first five Fourier harmonics. Results are validated against circuit simulation in LTspice. Code is in Python (scipy.signal, matplotlib).
 
- % [Architecture](assets/images/arch.png)
+[Filter](assets/images/Filter.png)
