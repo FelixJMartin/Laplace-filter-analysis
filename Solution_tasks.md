@@ -3,7 +3,6 @@
 I detta avsnitt härleds överföringsfunktionen mellan in- och utspänningsnivåerna i kretsen genom att använda impedansmetoden i Laplace-domänen.
 
 ### 2.1 Härledning med impedansmetoden
-
 Överföringsfunktionen \(H(s)\) kan uttryckas som:
 $$
 H(s)=\frac{V_{\text{out}}(s)}{V_{\text{in}}(s)}
@@ -55,4 +54,5 @@ So
 \[
 \boxed{\; y(t)=1-0.320256\,e^{-5000t}\,\sin(31224.99\,t)\;}\quad(\text{t in seconds}).
 \]
+
 
