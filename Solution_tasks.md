@@ -28,6 +28,12 @@ $$
 $$
 
 step respons: 
+
 $$
-y(t) = 1 - e^{-5000t} \cdot 0.32035 \, \sin\!\big(\sqrt{975000000}\, t\big).
+y(t) = 1 - e^{-5000t}  0.32035 \sin\big(\sqrt{975000000}\  t\big)
 $$
+
+
+
+
+
