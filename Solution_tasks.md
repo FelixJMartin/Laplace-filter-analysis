@@ -34,6 +34,18 @@ y(t) = 1 - e^{-5000t}  0.32035 \sin\big(\sqrt{975000000}\  t\big)
 $$
 
 
+![Step response](assets/img/Analytical.png)
 
+## 4 Amplitud- och fasediagram (Bode-diagram)
+
+Nedan visas amplitud- och fasediagram för filtret som funktion av inmatningsfrekvensen.  
+Vid en visuell inspektion kan filtertypen identifieras.
+
+**Figur 3:** Amplituddiagram  
+**Figur 4:** Fasediagram  
+
+Utifrån Bode-diagrammet kan filtret klassificeras som ett **notch-filter**, då det dämpar signalen vid *5 kHz*.
+
+![Bode-diagram](assets/img/Bode.png)
 
 
