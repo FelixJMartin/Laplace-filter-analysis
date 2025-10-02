@@ -1,33 +1,26 @@
 # TRANSFORM-METHODS
-Analysis and simulation of a 2nd-order analog filter using Fourier/Laplace methods: derive  𝐻 ( 𝑠 ) H(s), step response, Bode plots, square-wave response, and validate against circuit simulation.
+Analysis and simulation of a second-order analog filter using Fourier and Laplace methods. The project derives the transfer function $H(s)$, computes the analytical step response and verifies it numerically, generates Bode magnitude/phase plots, and evaluates the square-wave response using the first five Fourier harmonics. Results are validated against circuit simulation in LTspice, and all analysis is implemented in Python (`scipy.signal`, `matplotlib`).
 
-
-I analyze a linear second-order analog filter using Fourier and Laplace transforms: derive the transfer function 
-𝐻
-(
-𝑠
-)
-, compute the closed-form step response and verify it numerically, generate Bode magnitude/phase plots, and evaluate the square-wave response via the first five Fourier harmonics. Results are validated against circuit simulation in LTspice. Code is in Python (scipy.signal, matplotlib).
 
 ![Filter diagram](assets/img/Filter.png)
 
 
 ### Task 1 — Transfer function (impedance method)
 
-Replaced components with Laplace impedances $Z_R=R$, $Z_C=\tfrac{1}{sC}$, solved for $H(s)=\tfrac{V_{\text{out}}(s)}{V_{\text{in}}(s)}$; sanity-checked $H(0)$ and $\lim_{s\to\infty}H(s)$.
-
+Replaced components with Laplace impedances $Z_R=R$, $Z_C=\tfrac{1}{sC}$, solved for $H(s)=\tfrac{V_{\text{out}}(s)}{V_{\text{in}}(s)}$;
 
 ### Task 2 — Step Response
 
-**Analytical:** Derived the step response from \(Y(s) = H(s)/s\) using inverse Laplace.  
+**Analytical:** Derived the step response from $Y(s) = H(s)\*X(s)$ using inverse Laplace.  
 **Plot:** Implemented and visualized the closed-form solution in Python (Matplotlib).  
 **Verification:** Compared with SciPy’s `signal.step`; results matched well.  
 
 ### Task 3 — Bode Plot
 
-**Computation:** Generated amplitude and phase diagrams of the filter using Python (SciPy/Matplotlib).  
-**Analysis:** By visual inspection, the response shows low attenuation at low frequencies and strong attenuation at high frequencies.  
-**Conclusion:** The filter is identified as a **low-pass filter**.
+**Computation:** Generated amplitude and phase diagrams of the filter using Python (`scipy.signal`, `matplotlib`).  
+**Analysis:** The magnitude response shows a sharp attenuation around 5 kHz, while frequencies below and above this point pass with little loss.  
+**Conclusion:** From the Bode diagram the filter is classified as a **notch filter**, suppressing signals at approximately 5 kHz.
+
 
 ### Task 4 — Square Wave Input
 
