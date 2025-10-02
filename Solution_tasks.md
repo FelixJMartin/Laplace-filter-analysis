@@ -1,8 +1,8 @@
-## Derivation of the filter transfer function
+## 2 Derivation of the filter transfer function
 
 In this section, the transfer function between input and output voltage levels in the circuit is derived using the impedance method in the Laplace domain.
 
-### 2 Derivation using the impedance method
+### 2.1 Derivation using the impedance method
 
 The transfer function $H(s)$ can be expressed as:
 
@@ -13,10 +13,9 @@ $$
 Derived by hand.  
 
 a. Derive the analytical expression for the step response of your filter in the time domain.  
-b. Plot the function you obtained in (a) using a python. 
+b. Plot the function you obtained in (a) using Python.  
 
-
-### 3 Step response
+## 3 Step response
 
 Derivation of the analytical expression for the step response of the filter in the time domain.
 
@@ -52,7 +51,7 @@ From the Bode diagram, the filter can be classified as a **notch filter**, since
 A periodic square wave between $0 \, \text{V}$ and $1 \, \text{V}$ with a period of $T_0$ is considered.  
 This signal can be expressed using its Fourier series expansion.
 
-### 5.1 a. Fourier series expansion of the square wave
+### 5.1 Fourier series expansion of the square wave
 
 The square wave between $0 \, \text{V}$ and $1 \, \text{V}$ has a Fourier series given by:
 
@@ -65,4 +64,3 @@ where $T_0$ is the period of the signal and $k$ are integers $(1, 2, 3, \ldots)$
 The sum of the first four nonzero terms in the Fourier series:  
 
 ![Fourier series](assets/img/FT.png)
-
