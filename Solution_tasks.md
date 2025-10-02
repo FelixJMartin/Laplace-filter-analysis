@@ -32,7 +32,7 @@ $$
 y(t) = 1 - e^{-5000t} \, 0.32035 \, \sin\big(\sqrt{975000000}\, t\big)
 $$
 
-![Step response](assets/img/Analytical.png)
+![Step response](assets/img/Step_response.png)
 
 ## 4 Amplitude and phase diagrams (Bode diagram)
 
@@ -63,4 +63,4 @@ where $T_0$ is the period of the signal and $k$ are integers $(1, 2, 3, \ldots)$
 
 The sum of the first four nonzero terms in the Fourier series:  
 
-![Fourier series](assets/img/FT.png)
+![Fourier series](assets/img/FTblack.png)
