@@ -1,51 +1,68 @@
-## Härledning av filteröverföringsfunktionen
+## Derivation of the filter transfer function
 
-I detta avsnitt härleds överföringsfunktionen mellan in- och utspänningsnivåerna i kretsen genom att använda impedansmetoden i Laplace-domänen.
+In this section, the transfer function between input and output voltage levels in the circuit is derived using the impedance method in the Laplace domain.
 
-### 2 Härledning med impedansmetoden
-Överföringsfunktionen $H(s)\$ kan uttryckas som:
+### 2 Derivation using the impedance method
+
+The transfer function $H(s)$ can be expressed as:
 
 $$
 \frac{V_{\text{out}}}{V_{\text{in}}} = \frac{s^{2} C L R + R}{s^{2} C L R + Ls + R}
 $$
 
-Härleddes för hand. 
+Derived by hand.  
 
-Derive the analytical expression for the step response of your filter in time domain.
-b. Plot the function you obtained in (a) using a plotting library of your choice.
-c. Verify your analytical calculation in the previous part by comparing with the
-numerical solution obtained by a reliable library/toolbox.
+a. Derive the analytical expression for the step response of your filter in the time domain.  
+b. Plot the function you obtained in (a) using a python. 
 
-### 3 Step respons
 
-härledning av analytical expression for the step response of your filter in time domain.
+### 3 Step response
 
-Through partial fraction division and some inbetween stpes we ended at the inverse Lapalce function of 
+Derivation of the analytical expression for the step response of the filter in the time domain.
+
+Through partial fraction expansion and some intermediate steps, we obtained the inverse Laplace transform:
 
 $$
 \mathcal{L}^{-1}\{Y(s)\}(t) 
-= 1 - e^{-5000t} \cdot \frac{1}{RC\beta} \, \sin(\beta t),
+= 1 - e^{-5000t} \cdot \frac{1}{RC\beta} \, \sin(\beta t)
 $$
 
-step respons: 
+Step response: 
 
 $$
-y(t) = 1 - e^{-5000t}  0.32035 \sin\big(\sqrt{975000000}\  t\big)
+y(t) = 1 - e^{-5000t} \, 0.32035 \, \sin\big(\sqrt{975000000}\, t\big)
 $$
-
 
 ![Step response](assets/img/Analytical.png)
 
-## 4 Amplitud- och fasediagram (Bode-diagram)
+## 4 Amplitude and phase diagrams (Bode diagram)
 
-Nedan visas amplitud- och fasediagram för filtret som funktion av inmatningsfrekvensen.  
-Vid en visuell inspektion kan filtertypen identifieras.
+Below the amplitude and phase diagrams for the filter are shown as functions of the input frequency.  
+By visual inspection, the filter type can be identified.
 
-**Figur 3:** Amplituddiagram  
-**Figur 4:** Fasediagram  
+**Figure 3:** Amplitude diagram  
+**Figure 4:** Phase diagram  
 
-Utifrån Bode-diagrammet kan filtret klassificeras som ett **notch-filter**, då det dämpar signalen vid *5 kHz*.
+From the Bode diagram, the filter can be classified as a **notch filter**, since it attenuates the signal at *5 kHz*.
 
-![Bode-diagram](assets/img/Bode.png)
+![Bode diagram](assets/img/Bode.png)
 
+## 5 Square wave input
+
+A periodic square wave between $0 \, \text{V}$ and $1 \, \text{V}$ with a period of $T_0$ is considered.  
+This signal can be expressed using its Fourier series expansion.
+
+### 5.1 a. Fourier series expansion of the square wave
+
+The square wave between $0 \, \text{V}$ and $1 \, \text{V}$ has a Fourier series given by:
+
+$$
+x(t) = \frac{1}{2} + \frac{2}{\pi} \sum_{k=0}^{\infty} \frac{1}{2k+1} \sin\big((2k+1)\omega_0 t\big)
+$$
+
+where $T_0$ is the period of the signal and $k$ are integers $(1, 2, 3, \ldots)$.
+
+The sum of the first four nonzero terms in the Fourier series:  
+
+![Fourier series](assets/img/FT.png)
 
