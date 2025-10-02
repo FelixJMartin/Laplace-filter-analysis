@@ -44,7 +44,7 @@ By visual inspection, the filter type can be identified.
 
 From the Bode diagram, the filter can be classified as a **notch filter**, since it attenuates the signal at *5 kHz*.
 
-![Bode diagram](assets/img/Phase.png)
+![Bode diagram](assets/img/phase.png)
 
 ## 5 Square wave input
 
